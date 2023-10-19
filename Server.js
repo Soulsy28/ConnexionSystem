@@ -206,12 +206,6 @@ function modifVerifJoueur(code) {
   });
 }
 
-
-// INSERT INTO joueur (PseudoJoueur, MotDePasseJoueur, EmailJoueur, NiveauJoueur, ExperienceJoueur, RankJoueur, CompteVerifJoueur, TokenJoueur, ChangeMdpJoueur) VALUES ('Soulsy', '83aba1b56130b5040cbe1417ad1b64cfc5a85355a7060a3ea493d8c825130ba859d4654339f4678cdb39415f53c1069d7c35ee30f073d511b7f87557f28f015a', 'druarttanguypro@gmail.com', 1, 0, 0, false, 0, false);
-
-
-
-
 //allumage du serveur
 server.listen(8080);
 console.log("ecoute");
