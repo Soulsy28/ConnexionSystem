@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Inscription</title>
+</head>
+<body>
+    <div class="register-container">
+        <h1>Inscription</h1>
+        <form action="/inscrire" method="post">
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" name="pseudo" required>
+            </div>
+            <div class="form-group">
+                <label for="motdepasse">Mot de passe :</label>
+                <input type="password" id="motdepasse" name="motdepasse" required>
+            </div>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <% if (Erreur === "1") { %>
+            <p id="Erreur">L'inscription a échoué. L'email est trop grand.</p>
+        <% } %>
+        <% if (Erreur === "2") { %>
+            <p id="Erreur">L'inscription a échoué. Le pseudo est trop grand.</p>
+        <% } %>
+        <% if (Erreur === "3") { %>
+            <p id="Erreur">L'inscription a échoué. Le mot de passe est trop petit, minimum 8 caractères.</p>
+        <% } %>
+        <% if (Erreur === "4") { %>
+            <p id="Erreur">L'inscription a échoué. L'email ou le pseudo est déjà utilisé.</p>
+        <% } %>
+        <div class="links">
+            <a href="/connexion">Connexion</a>
+        </div>
+    </div>
+</body>
+</html>

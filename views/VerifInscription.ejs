@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Code de Vérification</title>
+</head>
+<body>
+    <div class="verification-container">
+        <h1>Entrez le Code de Vérification</h1>
+        <% if (Erreur === "1") { %>
+            <p id="Erreur">Vous n'êtes pas encore vérifié.</p>
+        <% } %>
+        <form action="/verification" method="post">
+            <div class="form-group">
+                <label>Entrez le code à 6 chiffres : <%= number %></label>
+                <input type="text" id="code" name="code" pattern="[0-9]{6}" required>
+                
+            </div>
+            <button type="submit">Vérifier</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Styles communs pour les deux pages */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Couleur de fond sombre */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Couleur du texte */
+}
+
+.login-container, .inscription-container {
+    background-color: #1c1c1c; /* Couleur de fond du conteneur */
+    max-width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Pour cacher le débordement des éléments enfants */
+}
+
+.login-container h1, .inscription-container h1 {
+    font-size: 24px;
+    color: #fff; /* Couleur du texte du titre */
+}
+
+.form-group {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ccc; /* Couleur du texte de l'étiquette */
+}
+
+.form-group input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #232323; /* Couleur de fond des champs de texte */
+    color: #fff; /* Couleur du texte des champs de texte */
+    max-width: 100%; /* Limiter la largeur au maximum de la div parent */
+}
+
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s; /* Ajout d'une transition pour le changement de couleur au survol */
+}
+
+button:hover {
+    background-color: #0056b3; /* Nouvelle couleur de fond au survol */
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+}
+
+.links a:hover {
+    color: #0056b3; /* Nouvelle couleur au survol des liens */
+}
+
+.links form {
+    flex: 1; /* Pour qu'ils occupent une part égale de l'espace disponible */
+    justify-content: space-between;
+}
+
+.links form button {
+    width: 95%; /* Remettez la largeur à 100% pour remplir la colonne */
+}
+
+.register-container {
+    background-color: #1c1c1c;
+    max-width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 480px) {
+    /* Styles pour les écrans de moins de 480 pixels de largeur */
+    .login-container, .inscription-container {
+        max-width: 100%; /* Ajustement à la largeur de l'écran */
+    }
+}

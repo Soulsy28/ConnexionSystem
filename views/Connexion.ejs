@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Page de Connexion</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" name="pseudo" required>
+            </div>
+            <div class="form-group">
+                <label for="motdepasse">Mot de passe :</label>
+                <input type="password" id="motdepasse" name="motdepasse" required>
+            </div>
+            <button type="submit">Connexion</button>
+        </form>
+        <% if (Erreur === "1") { %>
+            <p id="Erreur">Pseudo ou mot de passe erroné</p>
+        <% } %>
+        <div class="links">
+            <form action="/inscription" method="post">
+                <button type="submit">S'inscrire</button>
+            </form>
+            <!-- <form action="/motdepasseoublie" method="post">
+                <button type="submit">Mot de passe oublié</button>
+            </form> -->
+        </div>
+    </div>
+</body>
+</html>
